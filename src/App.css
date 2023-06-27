@@ -16,6 +16,25 @@
     display: none;
   }
 
+  main p{
+    margin: 40px 0;
+  }
+
+  footer{
+    height: 100px;
+    background-color: #40454f;
+    align-items: center;
+    display: flex;
+    padding: 0 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+
+  /* MOBILE */
+
   @media (max-width: 675px) {
     
     
@@ -32,7 +51,7 @@
 
     .header ul li{background-color: #40454f;}
     .header li:first-child{
-      background-color: transparent;
+      background-color: #5d616a;
     }
     .header li {
       padding: 20px;

@@ -45,7 +45,7 @@ const Menu = () => {
             data ? data.map(
               function(data) {
                 return (
-                  <li id={data.id} key={data.id}>{data.name}</li>
+                  <li id={data.id} key={data.id}><a href={data.url}>{data.name}</a></li>
                 )
               }    
             ) : ''

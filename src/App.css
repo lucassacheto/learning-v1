@@ -26,17 +26,57 @@
     align-items: center;
     display: flex;
     padding: 0 20px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
   }
 
 
+  .modal-overlay{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 2;
+  }
+  .modal .modal-wrapper{
+      position: relative;
+      margin: 20px auto;
+      max-width: 200px;
+  }
+  .modal .modal-wrapper .btnCloseModal{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 0;
+    background: none;
+    outline: none;
+    display: block;
+  }
+  .modal .modal-content{
+    background-color: antiquewhite;
+    position: relative;
+    display: flex;
+    color:#000;
+    padding: 20px;
+  }
+
   /* MOBILE */
 
   @media (max-width: 675px) {
-    
     
     .header ul{
       display: flex;

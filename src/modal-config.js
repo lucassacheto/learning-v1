@@ -2,25 +2,29 @@
 
 
 export const modalConfig = (modalDataName, btnType) => {
-    //console.log(modalDataName);
+    console.log(modalDataName, btnType);
     
     const selectModal = document.querySelector(".modal#"+modalDataName)
-    //console.log(selectModal);
-    selectModal.setAttribute("style", "display: block")
-
+    
     const modalOverlay = document.getElementById('modal-overlay')
     //console.log(modalOverlay);
 
-    if(btnType == "closeModal") { 
-        closeModal()
-    } else{
-        
-        modalOverlay.addEventListener("click", () => {
-            closeModal()
-        })
-        
-        // Make body no scrollable
-        document.body.setAttribute("style", "overflow: hidden")
+    switch (btnType) {
+        case "modal":
+            //console.log(selectModal);
+            selectModal.setAttribute("style", "display: block")
+            document.body.addEventListener( "click", (e) => {
+                //console.log(e.target.id);
+                if(e.target.id == modalDataName){
+                    closeModal() 
+                }
+            })
+            // Make body no scrollable
+            document.body.setAttribute("style", "overflow: hidden")
+        break;
+        case "closeModal":
+            closeModal()    
+        break;
     }
 
     // Close modal function

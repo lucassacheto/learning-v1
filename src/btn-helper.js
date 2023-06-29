@@ -18,14 +18,27 @@ export const btnType = (e) => {
             htmlBody.after(div);
 
             // Open the modal related
-            modalConfig(modalDataName)
+            modalConfig(modalDataName, btnType)
 
             break;
         case "closeModal":
             modalConfig(modalDataName, btnType)
             break;
-        case "submit":
-            console.log("Button will submit");
+        case "scrollToISI":
+            console.log("Button will closeISI");
+            const checkOverlay = document.getElementById("modal-overlay")
+            if(checkOverlay == null){
+                document.getElementById('ISI').scrollIntoView({
+                    behavior: 'smooth'
+                })
+            }else{
+                const checkModal = document.querySelectorAll(".modal")
+                modalConfig(checkModal[0].id, "closeModal")
+                document.getElementById('ISI').scrollIntoView({
+                    behavior: 'smooth'
+                })
+            }
+            
             break;
     }
 

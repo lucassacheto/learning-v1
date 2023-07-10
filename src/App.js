@@ -1,9 +1,7 @@
-import {useState} from 'react'
 import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
 import './App.css';
-import { btnType } from './btn-helper'
 
 function App() {
 
@@ -11,7 +9,7 @@ function App() {
     <div className="App">
       
       <Header />
-      <Content btnType={btnType} />
+      <Content />
       <Footer />
 
     </div>

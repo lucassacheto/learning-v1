@@ -1,12 +1,46 @@
 import Modal from './Modal'
 import ISI from './ISI'
+import Tabs from './Tabs'
 
-const Content = ({btnType}) => {
+const Content = () => {
     return(
         <main>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             </p>
-            <button id="btnAction" onClick={btnType} className="btn" data-type="modal" data-name="content-1">Open Modal</button>
+            {/* 
+                modalAction: click/auto/null 
+                modalType: file/id
+                modalName: file name e.g modal-NAME.html or id e.g. modal-NAME
+            */}
+            <Modal modalName="modal-test" modalAction="click" modalType="id" />
+            <div id="modal-test" className="modal">
+                <h2>Test modal 1</h2>
+                <p> TEST MODAL 1</p>
+            </div>
+            <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <Tabs TabName="mytab" />
+            <div id="mytab" className="tab-content">
+                content 1
+            </div>
+            <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <Modal modalName="modal-asd" modalAction="click" modalType="id" />
+            <div id="modal-asd" className="modal">
+                <h2>Test modal 2</h2>
+                <p> TEST MODAL 2</p>
+            </div>
             <p>
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </p>
@@ -64,24 +98,7 @@ const Content = ({btnType}) => {
             <p>
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </p>
-            <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
-            <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
-            <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
-            <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
-            <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
-            <Modal btnType={btnType} content="content-1" />
-            
-            <ISI btnType={btnType} />
+            <ISI />
         </main>
 
     )

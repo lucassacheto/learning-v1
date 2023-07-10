@@ -29,6 +29,10 @@
     margin: 40px 0;
   }
 
+  main .isiDrawer p{
+    margin: 4px 0;
+  }
+
   footer{
     height: 40px;
     background-color: #40454f;
@@ -54,17 +58,17 @@
 
   .modal {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
     overflow-x: hidden;
     overflow-y: auto;
     z-index: 3;
+    display: none;
   }
   .modal .modal-wrapper{
       position: relative;
-      margin: 20px auto;
+      
       max-width: 200px;
   }
   .modal .modal-wrapper .btnCloseModal{
@@ -87,9 +91,9 @@
   .isiDrawerWrapper{
     position: fixed;
     z-index: 3;
-    width: 100%;
-    bottom: 0;
-    left: 0;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .isiDrawerWrapper.hide{
     display: none;
@@ -109,6 +113,29 @@
     position: absolute;
     right: 10px;
     top: 14px;
+  }
+
+  .tabsWrapper{
+    position: relative;
+    width: 100%;
+    
+  }
+  .tabs-nav{
+    
+  }
+  .tabs-nav ul{
+    border: 1px solid green;
+    display: flex;
+    align-content: space-between;
+    max-width: 300px;
+  }
+  .tabs-nav ul li{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .tab-content{
+    display: none;
   }
 
   /* MOBILE */
@@ -149,7 +176,6 @@
     .header button#btnNavControl.close::before{
       content: 'b';
     }
-
     .isiDrawer{
       max-width: 340px;
     }

@@ -3,7 +3,6 @@ import { MdMenu, MdOutlineClose } from "react-icons/md";
 
 const Menu = () => {
   
-
   function setNavOpen(e){
     console.log(e);
     

@@ -2,6 +2,8 @@ import Modal from './Modal'
 import ISI from './ISI'
 import Tabs from './Tabs'
 
+import ModalASD from '../modals/ModalASD'
+
 const Content = () => {
     return(
         <main>
@@ -23,10 +25,7 @@ const Content = () => {
             <p>
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </p>
-            <Tabs TabName="mytab" />
-            <div id="mytab" className="tab-content">
-                content 1
-            </div>
+            <Tabs TabName="mytab" TabNum="2" />
             <p>
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </p>
@@ -36,11 +35,7 @@ const Content = () => {
             <p>
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </p>
-            <Modal modalName="modal-asd" modalAction="click" modalType="id" />
-            <div id="modal-asd" className="modal">
-                <h2>Test modal 2</h2>
-                <p> TEST MODAL 2</p>
-            </div>
+            <ModalASD />
             <p>
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </p>

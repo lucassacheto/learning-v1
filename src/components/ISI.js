@@ -48,10 +48,12 @@ const ISI = () => {
         console.log("Button will closeISI");
         const checkOverlay = document.getElementById("modal-overlay")
         if(checkOverlay == null){
+            //console.log("no");
             document.getElementById('ISI').scrollIntoView({
                 behavior: 'smooth'
             })
         }else{
+            //console.log("yes");
             document.body.removeAttribute("style")
             document.getElementById('ISI').scrollIntoView({
                 behavior: 'smooth'
